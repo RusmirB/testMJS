@@ -30,7 +30,7 @@ describe('PUT - update user', () => {
     it('Should update password', (done) => {
         chai
             .request(api)
-            .post('/api/users')
+            .post('/api/users/' + id)
             .send({"username": username, 'password':password +'update'})
             .end(function (error, response) {
                 if (error) done(error);
